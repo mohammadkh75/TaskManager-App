@@ -42,8 +42,9 @@ const handleLogin = async (e : React.FormEvent) =>
             body: JSON.stringify(payload),
         }
         );
-        const result = response.json();
-        router.push('/tasks/[assignedTo]')
+        const result =  await response.json();
+        const resultId = result.user.id;
+        router.push(`/users/${resultId}`)
         console.log(result);
 
     }catch

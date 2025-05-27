@@ -3,8 +3,21 @@ export interface Task {
     id: string;
     title: string;
     description: string;
-    createdAt: Date|string;
-    updatedAt: Date|string;
-    assignedTo:string;
+    createdAt: string;
+    updatedAt: string;
+    assignedToUserId:string;
 
 }
+
+export interface TaskCardProp{
+    task:Task;
+}
+
+export interface TaskColumnProps {
+    title: string;
+    tasks: Task[];
+  };
+
+  export interface UserTaskBoardProp {
+    tasks: Task[];
+  };

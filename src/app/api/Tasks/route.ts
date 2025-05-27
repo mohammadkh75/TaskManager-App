@@ -9,10 +9,10 @@ export async function GET(request : NextRequest) {
 
 try{
     const {searchParams} = new URL(request.url);
-    const userId = searchParams.get("assignedto")
+    const userId = searchParams.get("assignedToUserId")
 
     const filteredTasks = userId
-    ? tasks.filter((task) => task.assignedTo === userId)
+    ? tasks.filter((task) => task.assignedToUserId === userId)
     : tasks;
     return NextResponse.json(filteredTasks);
   } catch (error) {
@@ -37,7 +37,7 @@ export async function POST(request: NextRequest) {
         status:'in_progress',
         title: body.title,
         description: body.description,
-        assignedTo: body.assignedTo,
+        assignedToUserId: body.assignedTo,
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString(),
       };

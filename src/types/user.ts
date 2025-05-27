@@ -12,3 +12,10 @@ export interface CreateUserPayload{
     name:string;
     email:string;
 }
+
+export interface UserPageProp
+{
+    params : {
+        id:string;
+    }
+}
