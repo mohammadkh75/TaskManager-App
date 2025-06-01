@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+ وضعیت پروژه: در حال توسعه و تکمیل
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+این پروژه از یک Todo List ساده شروع شده و هدف اصلی آن تبدیل شدن به یک سیستم مدیریت تسک پیچیده‌تر و حرفه‌ای‌تر است.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+ معرفی پروژه  
+در ابتدا این پروژه به صورت یک لیست ساده از کارهای روزمره طراحی شده بود، اما به مرور قصد دارم امکانات بیشتری مثل دسته‌بندی تسک‌ها، اولویت‌بندی، تعیین زمان انجام، و نمایش وضعیت پیشرفت به آن اضافه کنم تا به یک Task Manager کامل و کاربردی تبدیل شود.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+وضعیت فعلی  
+- افزودن، ویرایش و حذف تسک‌ها  
+- نمایش لیست تسک‌ها  
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+ برنامه‌های آینده  
+- امکان دسته‌بندی تسک‌ها  
+- تعیین اولویت و وضعیت هر تسک  
+- یادآوری زمان انجام تسک‌ها  
+- امکان ایجاد و مدیریت پروژه‌ها توسط مدیر پروژه  
+- پنل ادمین برای مدیریت کلی سیستم  
+- تعریف نقش‌های کاربری شامل: کاربر عادی، مدیر پروژه و ادمین  
+- امکان ویرایش و حذف پروژه‌ها توسط مدیر پروژه  
+- قابلیت ایجاد کامنت و بحث روی هر تسک  
+- رابط کاربری پیشرفته‌تر و واکنش‌گرا  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+ تکنولوژی‌ها
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+این پروژه با استفاده از تکنولوژی‌های زیر توسعه داده  میشود:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- React: کتابخانه اصلی برای ساخت رابط کاربری  
+- Next.js: فریم‌ورک React برای رندر سمت سرور و ساخت برنامه‌های وب پویا  
+- TypeScript: افزودن تایپ‌سیستم به جاوااسکریپت برای افزایش کیفیت کد  
+- Tailwind CSS: فریم‌ورک طراحی Utility-First برای استایل‌دهی سریع و بهینه  
+- shadcn/ui: کامپوننت‌های آماده و زیبا برای سرعت بخشیدن به توسعه رابط کاربری  
+- Dynamic Routing و App Routing در Next.js: برای مدیریت مسیرهای پویا و ساختارمند برنامه  
+- Authentication با Next.js: سیستم احراز هویت برای مدیریت دسترسی کاربران  
+
+---
+
+وضعیت توسعه
+
+این پروژه هنوز در حال توسعه است و بسیاری از قابلیت‌ها در دست پیاده‌سازی می‌باشد.  
+
+---
+npm run dev برای 
