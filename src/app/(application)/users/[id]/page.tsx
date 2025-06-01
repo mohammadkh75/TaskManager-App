@@ -9,7 +9,7 @@ import { Task } from "@/types/task";
     const goaluser = users.find((user) => user.id === id)
     const userTasks : Task[] = tasks.filter((task) => task.assignedToUserId === goaluser?.id)
     return(
-
-   <UserTaskBoard tasks={userTasks} />
+           
+            <UserTaskBoard tasks={userTasks} />
     )
  }

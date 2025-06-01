@@ -62,7 +62,7 @@ export const tasks : Task[] =
       "title": "تسک شماره 7",
       "description": "توضیحات مربوط به تسک 7",
       "status": "in_progress",
-      "assignedToUserId": "u17",
+      "assignedToUserId": "u36",
       "createdAt": "2025-04-05T09:00:00",
       "updatedAt": "2025-04-07T13:00:00"
     },
@@ -71,7 +71,7 @@ export const tasks : Task[] =
       "title": "تسک شماره 8",
       "description": "توضیحات مربوط به تسک 8",
       "status": "in_progress",
-      "assignedToUserId": "u17",
+      "assignedToUserId": "u36",
       "createdAt": "2025-04-05T09:00:00",
       "updatedAt": "2025-04-08T13:00:00"
     },
@@ -80,7 +80,7 @@ export const tasks : Task[] =
       "title": "تسک شماره 9",
       "description": "توضیحات مربوط به تسک 9",
       "status": "done",
-      "assignedToUserId": "u30",
+      "assignedToUserId": "u36",
       "createdAt": "2025-04-06T13:00:00",
       "updatedAt": "2025-04-06T14:00:00"
     },

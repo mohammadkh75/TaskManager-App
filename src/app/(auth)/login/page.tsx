@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import * as React from "react"
 import { Button } from "@/components/ui/button"
+
 import {
   Card,
   CardContent,
@@ -14,12 +15,10 @@ import {
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { Router } from "next/router";
 export default function Login() {
 
     const [email,setEmail] = useState<string>("");
     const [password,setPassword] = useState<string>("");
-    const [isLoading, setIsLoading] = useState<boolean>(false);
     const router = useRouter();
 
     const handleEmail = (e :React.ChangeEvent<HTMLInputElement>) =>
