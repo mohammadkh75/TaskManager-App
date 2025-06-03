@@ -8,7 +8,7 @@ export const tasks : Task[] =
       "title": "تسک شماره 1",
       "description": "توضیحات مربوط به تسک 1",
       "status": "todo",
-      "assignedToUserId": "u12",
+      "assignedToUserId": "u5",
       "createdAt": "2025-04-20T12:00:00",
       "updatedAt": "2025-04-20T14:00:00"
     },
@@ -17,7 +17,7 @@ export const tasks : Task[] =
       "title": "تسک شماره 2",
       "description": "توضیحات مربوط به تسک 2",
       "status": "in_progress",
-      "assignedToUserId": "u25",
+      "assignedToUserId": "u5",
       "createdAt": "2025-04-03T11:00:00",
       "updatedAt": "2025-04-05T15:00:00"
     },
@@ -26,7 +26,7 @@ export const tasks : Task[] =
       "title": "تسک شماره 3",
       "description": "توضیحات مربوط به تسک 3",
       "status": "todo",
-      "assignedToUserId": "u8",
+      "assignedToUserId": "u5",
       "createdAt": "2025-04-21T11:00:00",
       "updatedAt": "2025-04-22T12:00:00"
     },
@@ -35,7 +35,7 @@ export const tasks : Task[] =
       "title": "تسک شماره 4",
       "description": "توضیحات مربوط به تسک 4",
       "status": "in_progress",
-      "assignedToUserId": "u24",
+      "assignedToUserId": "u5",
       "createdAt": "2025-04-11T09:00:00",
       "updatedAt": "2025-04-14T13:00:00"
     },
@@ -44,7 +44,7 @@ export const tasks : Task[] =
       "title": "تسک شماره 5",
       "description": "توضیحات مربوط به تسک 5",
       "status": "in_progress",
-      "assignedToUserId": "u19",
+      "assignedToUserId": "u5",
       "createdAt": "2025-04-02T13:00:00",
       "updatedAt": "2025-04-04T15:00:00"
     },
@@ -80,7 +80,7 @@ export const tasks : Task[] =
       "title": "تسک شماره 9",
       "description": "توضیحات مربوط به تسک 9",
       "status": "done",
-      "assignedToUserId": "u36",
+      "assignedToUserId": "u5",
       "createdAt": "2025-04-06T13:00:00",
       "updatedAt": "2025-04-06T14:00:00"
     },
@@ -359,7 +359,7 @@ export const tasks : Task[] =
       "title": "تسک شماره 40",
       "description": "توضیحات مربوط به تسک 40",
       "status": "done",
-      "assignedToUserId": "u37",
+      "assignedToUserId": "u36",
       "createdAt": "2025-04-04T12:00:00",
       "updatedAt": "2025-04-06T13:00:00"
     }

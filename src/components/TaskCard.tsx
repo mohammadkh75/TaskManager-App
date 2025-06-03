@@ -1,8 +1,15 @@
 
 import { TaskCardProp } from "@/types/task";
 import TaskOption from "./TaskOption";
+import useTaskStore from "@/app/stores/useStore";
 
-export default function TaskCard({ task, onDeleteTask }: TaskCardProp) {
+export default function TaskCard({ taskId }: TaskCardProp) {
+
+  const task = useTaskStore(state =>state.tasks.find(task => task.id === taskId));
+  if(!task)
+  {
+    return null;
+  }
 
   return (
     <div className=" flex flex-col  bg-white p-3 rounded-2xl shadow-black shadow-xl mb-2 ">
@@ -15,7 +22,7 @@ export default function TaskCard({ task, onDeleteTask }: TaskCardProp) {
         Update At: {new Date(task.updatedAt).toLocaleDateString("fa-IR")}
       </p>
 
-      <TaskOption task={task} onDelete={onDeleteTask} />
+      <TaskOption  taskId={taskId} />
     </div>
   );
 }

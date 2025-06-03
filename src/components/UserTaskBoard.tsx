@@ -1,17 +1,25 @@
+"use client"
 
 import TaskColumn from "./TaskColumn";
-import { Task, UserTaskBoardProp } from "@/types/task";
+import { Task } from "@/types/task";
+import useTaskStore from "@/app/stores/useStore";
 
-export default function UserTaskBoard({tasks} : UserTaskBoardProp)
+export default function UserTaskBoard()
 {
-    const todoTasks  = tasks.filter( task => task.status === "todo");
-    const inProgressTasks  = tasks.filter( task => task.status === "in_progress");
-    const doneTasks  = tasks.filter( task => task.status === "done");
+
+  const tasks   = useTaskStore((state) => state.tasks);
+
+  const toDoTasks = tasks.filter(task => task.status === "todo").map(task => task.id)
+  const inProgressTasks = tasks.filter(task => task.status === "in_progress").map(task => task.id)
+  const doneTasks = tasks.filter(task => task.status === "done").map(task => task.id)
+
+
     return(
       <div className="flex flex-row gap-x-1 px-4 py-4  justify-center">
-      <TaskColumn  title="TO Do " tasks={todoTasks} />
-      <TaskColumn title="IN Progress " tasks={inProgressTasks} />
-      <TaskColumn title="Done" tasks={doneTasks} />
+      <TaskColumn  title="TO Do " tasksId={toDoTasks}   />
+      <TaskColumn title="IN Progress " tasksId={inProgressTasks}  />
+      <TaskColumn title="Done" tasksId={doneTasks} />
   </div>
+  
     )
 }

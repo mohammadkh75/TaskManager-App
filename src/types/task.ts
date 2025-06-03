@@ -10,19 +10,19 @@ export interface Task {
 }
 
 export interface TaskCardProp {
-  task: Task;
-  onDeleteTask?: (id: string) => void
+  taskId: string;
+  
 }
 
 export interface TaskColumnProps {
   title: string;
-  tasks: Task[];
+  tasksId: string[];
 };
 
 export interface UserTaskBoardProp {
   tasks: Task[];
 };
 export interface TaskOptionProp {
-  task: Task;
+  taskId: string;
 }
 

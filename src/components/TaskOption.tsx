@@ -8,12 +8,10 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import useTaskStore from '@/app/stores/useStore';
+type IconType = "Edit" | "Comment" | "Next" | "Back" | "Delete";
 import { TaskOptionProp } from '@/types/task';
 import { Task } from '@/types/task';
-import Router from 'next/router';
-
-type IconType = "Edit" | "Comment" | "Next" | "Back" | "Delete";
-
 export interface IconItem {
   Icon: React.ElementType,
   label: string,
@@ -22,11 +20,9 @@ export interface IconItem {
 
 }
 
-export interface TaskOptioEmit {
-  onDelete?: (id: string) => void
-}
 
-export default function TaskOption({ task, onDelete }: TaskOptionProp & TaskOptioEmit) {
+
+export default function TaskOption( {taskId} : TaskOptionProp) {
   const icons: IconItem[] = [
     { Icon: FaComment, label: "Create a Comment On This Task", type: "Comment" },
     { Icon: FaEdit, label: "Edit This Task ", type: "Edit" },
@@ -35,47 +31,17 @@ export default function TaskOption({ task, onDelete }: TaskOptionProp & TaskOpti
     { Icon: FiArrowRight, label: "Move To Next Status ", type: "Next" },
   ];
 
-  async function HandleDelete(task: Task) {
+ const tasks = useTaskStore(state => state.tasks)
+  const removeTask = useTaskStore( state => state.removeTask)
+  const setTaskUpdate = useTaskStore(state => state.setTasks)
 
-    try {
-      const response = await fetch('/api/Tasks',
-        {
-          method: 'DELETE',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(task),
+  const nextTask = (taskId : string) =>
+  {
+  const updateTasks : Task[] = tasks.map(task => task.id === taskId ? {...task, status : 'done'} : task )
+  setTaskUpdate(updateTasks)
+}
 
-        }
-      );
-
-      if (!onDelete) {
-        return
-      }
-
-      console.log(task.id)
-      onDelete(task.id)
-
-
-      console.log(response);
-
-    }
-    catch {
-
-    }
-
-  }
-
-
-
-
-  const HandleClick = (e: IconType) => {
-    if (e === "Delete") {
-      HandleDelete(task);
-
-    }
-
-  }
+  
 
   return (
     <TooltipProvider>
@@ -86,8 +52,24 @@ export default function TaskOption({ task, onDelete }: TaskOptionProp & TaskOpti
               <button
                 className="p-2 rounded-full  bg-[#4A90E2] hover:bg-[#4A90E2] text-white transition shadow-md shadow-black border-2 border-blue-200 hover:scale-130"
                 aria-label={label}
-                onClick={() => HandleClick(type)}
 
+                onClick={() =>
+                   {
+                    if (type === "Delete")
+                {
+                     removeTask(taskId);
+                }
+
+                if(type === "Next")
+                {
+                  
+                  nextTask(taskId)
+                }
+              
+                }
+              
+              
+              }
               >
                 <Icon size={17} />
               </button>
