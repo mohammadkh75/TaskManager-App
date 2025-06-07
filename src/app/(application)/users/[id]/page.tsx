@@ -8,11 +8,32 @@ import StoreTasks from "@/components/StoreTasks";
  {
     const {id}=  await params;
     const goaluser = users.find((user) => user.id === id)
-    const userTasks : Task[] = tasks.filter((task) => task.assignedToUserId === goaluser?.id)
+    const userTasks : Task[] = tasks.filter((task) => task.assignedToUserId === goaluser?.id).map(task =>
+      
+    {
+      if(task.status === "todo")
+         {
+   task.columnId = 1
+         }
+         if(task.status === "in_progress")
+            {
+      task.columnId = 2
+            }
+            if(task.status === "done")
+               {
+         task.columnId = 3
+               }
+         return {...task}
+    })
+    if (!goaluser) {
+      return <div>User Not Found</div>;
+    }
+
+
     return(
         
            
-         <StoreTasks tasks={userTasks }>
+         <StoreTasks tasks={userTasks } user={goaluser}>
 
                 <UserTaskBoard />
 

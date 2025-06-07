@@ -1,13 +1,19 @@
+
+
 export interface Task {
   status: 'in_progress' | 'todo' | 'done';
+  columnId?: number, 
   id: string;
   title: string;
   description: string;
   createdAt: string;
   updatedAt: string;
   assignedToUserId: string;
+  comments? : string[];
 
 }
+
+
 
 export interface TaskCardProp {
   taskId: string;

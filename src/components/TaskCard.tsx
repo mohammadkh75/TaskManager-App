@@ -12,13 +12,13 @@ export default function TaskCard({ taskId }: TaskCardProp) {
   }
 
   return (
-    <div className=" flex flex-col  bg-white p-3 rounded-2xl shadow-black shadow-xl mb-2 ">
+    <div className=" flex flex-col  bg-muted p-3 rounded-2xl shadow-black shadow-xl mb-2 border-4 border-background ">
       <h3 className="font-semibold text-gray-800">{task.title}</h3>
-      <p className="text-sm text-gray-600">{task.description}</p>
-      <p className="text-sm text-gray-600">
+      <p className="text-sm text-gray-800">{task.description}</p>
+      <p className="text-sm text-gray-800">
         Create At: {new Date(task.createdAt).toLocaleDateString("fa-IR")}
       </p>
-      <p className="text-sm text-gray-600">
+      <p className="text-sm text-gray-800">
         Update At: {new Date(task.updatedAt).toLocaleDateString("fa-IR")}
       </p>
 
